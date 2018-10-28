@@ -1,19 +1,19 @@
 {
-  "name": "react-redux-hooks",
-  "version": "0.0.1",
-  "description": "Hook style Redux bindings for React",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/adamterlson/react-redux-hooks.git"
-  },
-  "author": "Adam Terlson <adam.terlson@internations.org>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/adamterlson/react-redux-hooks/issues"
-  },
-  "homepage": "https://github.com/adamterlson/react-redux-hooks#readme",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  }
+    "name": "react-redux-hooks",
+    "version": "0.0.1",
+    "description": "Hook style Redux bindings for React",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/adamterlson/react-redux-hooks.git"
+    },
+    "author": "Adam Terlson <adam.terlson@gmail.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/adamterlson/react-redux-hooks/issues"
+    },
+    "homepage": "https://github.com/adamterlson/react-redux-hooks#readme",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    }
 }

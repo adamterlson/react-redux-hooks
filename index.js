@@ -4,7 +4,7 @@ export const Context = createContext({})
 export const Provider = ({ store, children }) => <Context.Provider value={store}>{children}</Context.Provider>
 
 export const useRedux = getter => {
-    const store = useContext(context)
+    const store = useContext(Context)
     const initialState = store.getState(getter)
     const [state, setState] = useState(getter(initialState))
 
