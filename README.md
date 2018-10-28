@@ -11,7 +11,7 @@ import { useRedux } from 'react-redux-hooks'
 import myStore from '../myStore'
 
 function Counter({ initialCount }) {
-    const [count, dispatch] = useRedux(myStore, state => state.count)
+    const [count, dispatch] = useRedux(state => state.count)
     return (
         <>
             Count: {count}
@@ -27,7 +27,7 @@ You can also return larger sets of data from state:
 
 ```javascript
 function MessageWithUser({ userId }) {
-    const [{ message, user }, dispatch] = useRedux(myStore, state => {
+    const [{ message, user }, dispatch] = useRedux(state => {
         return {
             message: state.messages.filter(msg => msg.sender === userId),
             user: state.users.byId[userId],
