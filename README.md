@@ -2,6 +2,8 @@
 
 Simple way to hook components into Redux, without the overhead of react-redux's higher order function `connect`.
 
+Note: This package is currently not published under NPM as a package by the same name already exists which does pretty much the same thing. :)
+
 ## Example
 Begin by wrapping your component tree as with `react-redux`.
 
