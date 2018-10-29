@@ -6,7 +6,7 @@ export const Provider = ({ store, children }) => <Context.Provider value={store}
 export const useRedux = getter => {
     const store = useContext(Context)
     const initialState = getter(store.getState())
-    const [state, setState] = useState(getter(initialState))
+    const [state, setState] = useState(initialState)
 
     useEffect(() => {
         return store.subscribe(() => {
@@ -14,5 +14,5 @@ export const useRedux = getter => {
         })
     })
 
-    return [getter(initialState), store.dispatch]
+    return [initialState, store.dispatch]
 }
