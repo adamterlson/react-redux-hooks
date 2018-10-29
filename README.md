@@ -18,7 +18,7 @@ function App() {
 }
 ```
 
-And then consume it out of context.  API usage identical to that of React's `useReducer` hook, but instead leverages an entire store. Include an initial getter to react to a particular piece of state.
+And then consume it out of context.  API usage identical to that of React's `useReducer` hook, but instead leverages an entire store. Include an initial getter to react to a particular piece of state, rather than re-rendering any time the entire redux store changes.
 
 ```javascript
 import { useRedux } from 'react-redux-hooks'
