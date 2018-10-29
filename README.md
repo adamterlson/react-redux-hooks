@@ -3,12 +3,25 @@
 Simple way to hook components into Redux, without the overhead of react-redux's higher order function `connect`.
 
 ## Example
+Begin by wrapping your component tree as with `react-redux`.
 
-API usage identical to that of React's `useReducer` hook, but instead leverages an entire store. Include an initial getter to react to a particular piece of state.
+```javascript
+import { Provider } from 'react-redux-hooks'
+import myStore from '../myStore'
+
+function App() {
+    return (
+        <Provider store={myStore}>
+            <App />
+        </Provider>
+    )
+}
+```
+
+And then consume it out of context.  API usage identical to that of React's `useReducer` hook, but instead leverages an entire store. Include an initial getter to react to a particular piece of state.
 
 ```javascript
 import { useRedux } from 'react-redux-hooks'
-import myStore from '../myStore'
 
 function Counter({ initialCount }) {
     const [count, dispatch] = useRedux(state => state.count)
@@ -23,7 +36,7 @@ function Counter({ initialCount }) {
 }
 ```
 
-You can also return larger sets of data from state:
+You can also return larger sets of data from state, just like mapStateToProps:
 
 ```javascript
 function MessageWithUser({ userId }) {
